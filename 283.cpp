@@ -8,7 +8,6 @@ public:
             if (a) {
                 std::swap(a, nums[index++]);
             }
-
         }
     }
 };
