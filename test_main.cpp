@@ -15,6 +15,7 @@
 // LeetCode 题解
 #include "leetcode/0001_two_sum.cpp"
 #include "leetcode/0011_container_with_most_water.cpp"
+#include "leetcode/0042_trapping_rain_water.cpp"
 #include "leetcode/0049_group_anagrams.cpp"
 #include "leetcode/0128_longest_consecutive_sequence.cpp"
 #include "leetcode/0215_kth_largest_element.cpp"
@@ -58,6 +59,22 @@ void test_0011() {
     int result = solution.maxArea(height);
 
     cout << "最大容水量: " << result << endl;
+}
+
+/**
+ * @brief 测试 LeetCode 42. 接雨水
+ */
+void test_0042() {
+    cout << "\n=== LeetCode 42. 接雨水 ===" << endl;
+    cout << "输入格式: [高度数组]" << endl;
+    cout << "示例: [0,1,0,2,1,0,1,3,2,1,2,1]" << endl;
+
+    vector<int> height = LeetcodeInput::readArray1D(cin);
+
+    TrappingRainWater solution;
+    int result = solution.trap(height);
+
+    cout << "能接的雨水总量: " << result << endl;
 }
 
 /**
