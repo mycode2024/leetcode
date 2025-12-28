@@ -1,20 +1,41 @@
 {
+    // ========================================
+    // C/C++ IntelliSense 配置文件
+    // 用于配置代码智能提示、语法检查等功能
+    // ========================================
+
     "configurations": [
         {
+            // 配置名称（Windows 32/64 位平台）
             "name": "Win32",
+
+            // 头文件搜索路径
+            // ${workspaceFolder}/** 表示搜索工作区所有子目录
             "includePath": [
                 "${workspaceFolder}/**"
             ],
+
+            // 预定义宏
             "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
+                "_DEBUG",        // 调试模式宏
+                "UNICODE",       // Unicode 字符集
+                "_UNICODE"       // Unicode 字符集（备用）
             ],
+
+            // 编译器路径（用于 IntelliSense 分析）
             "compilerPath": "D:\\ProgrammingEnvironment\\CCompilingEnvironment\\MingGW\\mingw64\\bin\\gcc.exe",
+
+            // C 语言标准版本
             "cStandard": "c17",
+
+            // C++ 语言标准版本
             "cppStandard": "gnu++20",
+
+            // IntelliSense 模式（匹配编译器类型）
             "intelliSenseMode": "windows-gcc-x64"
         }
     ],
+
+    // 配置文件版本
     "version": 4
 }

@@ -1,0 +1,176 @@
+// ========================================
+// 测试函数模板
+// 复制以下代码到 test_main.cpp 中
+// ========================================
+
+// 1. 在文件顶部添加 include
+#include "leetcode/XXXX_problem_name.cpp"
+
+// 2. 添加测试函数
+/**
+ * @brief 测试 LeetCode XXX. 题目中文名
+ */
+void test_XXXX() {
+    cout << "\n=== LeetCode XXX. 题目中文名 ===" << endl;
+    cout << "输入格式: [说明输入格式]" << endl;
+    cout << "示例: [给出示例]" << endl;
+
+    // ========== 读取输入 ==========
+    // 根据题目需要选择合适的输入方式：
+    
+    // 一维整数数组
+    // vector<int> nums = LeetcodeInput::readArray1D(cin);
+    
+    // 二维整数数组
+    // vector<vector<int>> matrix = LeetcodeInput::readArray2D(cin);
+    
+    // 字符串数组
+    // vector<string> strs = LeetcodeInput::readStringArray(cin);
+    
+    // 单个整数
+    // int n;
+    // cin >> n;
+    
+    // 单个字符串
+    // string s;
+    // cin >> s;
+    
+    // 多个参数
+    // int param1, param2;
+    // cin >> param1 >> param2;
+
+    // ========== 调用解法 ==========
+    Solution_XXXX solution;
+    auto result = solution.functionName(/* 参数 */);
+
+    // ========== 输出结果 ==========
+    // 根据返回类型选择合适的输出方式：
+    
+    // 整数
+    // cout << "结果: " << result << endl;
+    
+    // 一维数组
+    // cout << "结果: [";
+    // for (size_t i = 0; i < result.size(); i++) {
+    //     cout << result[i];
+    //     if (i < result.size() - 1) cout << ",";
+    // }
+    // cout << "]" << endl;
+    
+    // 二维数组
+    // cout << "结果: [" << endl;
+    // for (const auto& row : result) {
+    //     cout << "  [";
+    //     for (size_t i = 0; i < row.size(); i++) {
+    //         cout << row[i];
+    //         if (i < row.size() - 1) cout << ",";
+    //     }
+    //     cout << "]" << endl;
+    // }
+    // cout << "]" << endl;
+    
+    // 字符串
+    // cout << "结果: " << result << endl;
+    
+    // 布尔值
+    // cout << "结果: " << (result ? "true" : "false") << endl;
+}
+
+// 3. 在 showMenu() 函数中添加选项
+void showMenu() {
+    // ...
+    cout << "X. LeetCode XXX - 题目中文名" << endl;
+    // ...
+}
+
+// 4. 在 main() 函数的 switch 中添加 case
+int main() {
+    while (true) {
+        showMenu();
+        
+        int choice;
+        cin >> choice;
+        
+        switch (choice) {
+            // ... 其他 case
+            case X: test_XXXX(); break;  // 新添加
+            // ...
+        }
+    }
+    
+    return 0;
+}
+
+// ========================================
+// 常用输入输出示例
+// ========================================
+
+// 示例 1: 数组 + 目标值（如两数之和）
+void test_example1() {
+    vector<int> nums = LeetcodeInput::readArray1D(cin);
+    int target;
+    cin >> target;
+    
+    Solution solution;
+    vector<int> result = solution.twoSum(nums, target);
+    
+    cout << "结果: [" << result[0] << ", " << result[1] << "]" << endl;
+}
+
+// 示例 2: 二维矩阵（如螺旋矩阵）
+void test_example2() {
+    vector<vector<int>> matrix = LeetcodeInput::readArray2D(cin);
+    
+    Solution solution;
+    vector<int> result = solution.spiralOrder(matrix);
+    
+    cout << "结果: [";
+    for (size_t i = 0; i < result.size(); i++) {
+        cout << result[i];
+        if (i < result.size() - 1) cout << ",";
+    }
+    cout << "]" << endl;
+}
+
+// 示例 3: 字符串数组（如字母异位词分组）
+void test_example3() {
+    vector<string> strs = LeetcodeInput::readStringArray(cin);
+    
+    Solution solution;
+    vector<vector<string>> result = solution.groupAnagrams(strs);
+    
+    cout << "结果: [" << endl;
+    for (const auto& group : result) {
+        cout << "  [";
+        for (size_t i = 0; i < group.size(); i++) {
+            cout << "\"" << group[i] << "\"";
+            if (i < group.size() - 1) cout << ",";
+        }
+        cout << "]" << endl;
+    }
+    cout << "]" << endl;
+}
+
+// 示例 4: 单个字符串（如最长回文子串）
+void test_example4() {
+    string s;
+    cin >> s;
+    
+    Solution solution;
+    string result = solution.longestPalindrome(s);
+    
+    cout << "结果: " << result << endl;
+}
+
+// 示例 5: 多个参数（如搜索二维矩阵）
+void test_example5() {
+    vector<vector<int>> matrix = LeetcodeInput::readArray2D(cin);
+    int target;
+    cin >> target;
+    
+    Solution solution;
+    bool result = solution.searchMatrix(matrix, target);
+    
+    cout << "结果: " << (result ? "true" : "false") << endl;
+}
+
