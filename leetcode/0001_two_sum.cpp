@@ -26,6 +26,8 @@
 
 #include <vector>
 #include <unordered_map>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class TwoSum
@@ -77,3 +79,20 @@ private:
     // static const int kMaxArraySize = 10000;
 };
 
+/**
+ * @brief 测试 LeetCode 1. 两数之和
+ */
+void test_0001() {
+    std::cout << "\n=== LeetCode 1. 两数之和 ===" << std::endl;
+    std::cout << "输入格式: [数组] 目标值" << std::endl;
+    std::cout << "示例: [2,7,11,15] 9" << std::endl;
+
+    std::vector<int> nums = LeetcodeInput::readArray1D(std::cin);
+    int target;
+    std::cin >> target;
+
+    TwoSum solution;
+    std::vector<int> result = solution.twoSum(nums, target);
+
+    std::cout << "结果: [" << result[0] << ", " << result[1] << "]" << std::endl;
+}

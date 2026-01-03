@@ -35,6 +35,8 @@
 
 #include <vector>
 #include <algorithm>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class ContainerWithMostWater
@@ -88,3 +90,19 @@ private:
     // static const int kMaxHeight = 10000;  ///< 最大高度
 };
 
+/**
+ * @brief 测试 LeetCode 11. 盛最多水的容器
+ */
+void test_0011() {
+    using namespace std;
+    cout << "\n=== LeetCode 11. 盛最多水的容器 ===" << endl;
+    cout << "输入格式: [高度数组]" << endl;
+    cout << "示例: [1,8,6,2,5,4,8,3,7]" << endl;
+
+    vector<int> height = LeetcodeInput::readArray1D(cin);
+
+    ContainerWithMostWater solution;
+    int result = solution.maxArea(height);
+
+    cout << "最大容水量: " << result << endl;
+}

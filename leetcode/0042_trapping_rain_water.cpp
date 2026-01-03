@@ -43,6 +43,8 @@
 #include <vector>
 #include <algorithm>
 #include <stack>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class TrappingRainWater
@@ -238,6 +240,23 @@ private:
     // 如果需要常量定义
     // static const int kMaxHeight = 100000;  ///< 最大高度
 };
+
+/**
+ * @brief 测试 LeetCode 42. 接雨水
+ */
+void test_0042() {
+    using namespace std;
+    cout << "\n=== LeetCode 42. 接雨水 ===" << endl;
+    cout << "输入格式: [高度数组]" << endl;
+    cout << "示例: [0,1,0,2,1,0,1,3,2,1,2,1]" << endl;
+
+    vector<int> height = LeetcodeInput::readArray1D(cin);
+
+    TrappingRainWater solution;
+    int result = solution.trap(height);
+
+    cout << "能接的雨水总量: " << result << endl;
+}
 
 /**
  * @brief 三种解法对比总结

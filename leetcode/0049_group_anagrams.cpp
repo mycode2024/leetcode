@@ -39,6 +39,8 @@
 #include <unordered_map>
 #include <string>
 #include <algorithm>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class GroupAnagrams
@@ -93,3 +95,29 @@ private:
     // static const int kMaxStringLength = 100;  ///< 最大字符串长度
 };
 
+/**
+ * @brief 测试 LeetCode 49. 字母异位词分组
+ */
+void test_0049() {
+    using namespace std;
+    cout << "\n=== LeetCode 49. 字母异位词分组 ===" << endl;
+    cout << "输入格式: [字符串数组]" << endl;
+    cout << "示例: [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]" << endl;
+
+    vector<string> strs = LeetcodeInput::readStringArray();
+
+    GroupAnagrams solution;
+    vector<vector<string>> result = solution.groupAnagrams(strs);
+
+    cout << "结果: [";
+    for (size_t i = 0; i < result.size(); i++) {
+        cout << "[";
+        for (size_t j = 0; j < result[i].size(); j++) {
+            cout << "\"" << result[i][j] << "\"";
+            if (j < result[i].size() - 1) cout << ",";
+        }
+        cout << "]";
+        if (i < result.size() - 1) cout << ",";
+    }
+    cout << "]" << endl;
+}

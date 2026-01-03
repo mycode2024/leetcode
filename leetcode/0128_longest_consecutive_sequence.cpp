@@ -34,6 +34,8 @@
 #include <vector>
 #include <unordered_set>
 #include <algorithm>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class LongestConsecutiveSequence
@@ -99,3 +101,19 @@ private:
     // static const int kMaxValue = 1000000000;  ///< 最大值
 };
 
+/**
+ * @brief 测试 LeetCode 128. 最长连续序列
+ */
+void test_0128() {
+    using namespace std;
+    cout << "\n=== LeetCode 128. 最长连续序列 ===" << endl;
+    cout << "输入格式: [数组]" << endl;
+    cout << "示例: [100,4,200,1,3,2]" << endl;
+
+    vector<int> nums = LeetcodeInput::readArray1D(cin);
+
+    LongestConsecutiveSequence solution;
+    int result = solution.longestConsecutive(nums);
+
+    cout << "最长连续序列长度: " << result << endl;
+}

@@ -31,6 +31,8 @@
 
 #include <vector>
 #include <algorithm>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class MoveZeroes
@@ -76,3 +78,24 @@ private:
     // static const int kMaxArraySize = 10000;  ///< 最大数组大小
 };
 
+/**
+ * @brief 测试 LeetCode 283. 移动零
+ */
+void test_0283() {
+    using namespace std;
+    cout << "\n=== LeetCode 283. 移动零 ===" << endl;
+    cout << "输入格式: [数组]" << endl;
+    cout << "示例: [0,1,0,3,12]" << endl;
+
+    vector<int> nums = LeetcodeInput::readArray1D(cin);
+
+    MoveZeroes solution;
+    solution.moveZeroes(nums);
+
+    cout << "结果: [";
+    for (size_t i = 0; i < nums.size(); i++) {
+        cout << nums[i];
+        if (i < nums.size() - 1) cout << ",";
+    }
+    cout << "]" << endl;
+}

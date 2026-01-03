@@ -35,6 +35,8 @@
 
 #include <vector>
 #include <cstdlib>
+#include <iostream>
+#include "../include/leetcode_utils.h"
 
 /**
  * @class KthLargestElement
@@ -112,3 +114,22 @@ private:
     }
 };
 
+
+/**
+ * @brief 测试 LeetCode 215. 数组中的第K个最大元素
+ */
+void test_0215() {
+    using namespace std;
+    cout << "\n=== LeetCode 215. 数组中的第K个最大元素 ===" << endl;
+    cout << "输入格式: [数组] k" << endl;
+    cout << "示例: [3,2,1,5,6,4] 2" << endl;
+
+    vector<int> nums = LeetcodeInput::readArray1D(cin);
+    int k;
+    cin >> k;
+
+    KthLargestElement solution;
+    int result = solution.findKthLargest(nums, k);
+
+    cout << "第 " << k << " 个最大元素: " << result << endl;
+}
